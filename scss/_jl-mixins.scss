@@ -1,0 +1,21 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transform($trans) {
+	-webkit-transform: $trans;
+	-moz-transform: $trans;
+	-ms-transform: $trans;
+	transform: $trans;
+}
+
+@mixin transition($anim) {
+	-webkit-transition: $anim;
+	-moz-transition: ($anim);
+	-ms-transition: ($anim);
+	transition: ($anim);
+}
+
