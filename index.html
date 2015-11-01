@@ -13,19 +13,28 @@
 
   <body>
     <div class="wrapper">
-      <nav id="topnav">
-        <div class="burger icon">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve"><circle fill="#FF6479" cx="40" cy="40" r="30"/><path class="shaddow" fill="#AF2D48" d="M55 28.7l-29.9 4.6 7.8 7.8 -7.8 1.2 7.8 7.8 -7.8 1.2 18.4 18.5c13.8-1.6 24.7-12.5 26.3-26.3L55 28.7z"/><path fill="#FFFFFF" d="M55 42H25v-4h30V42zM55 47H25v4h30V47zM55 29H25v4h30V29z"/></svg>
-        </div>
-        <ul class="navlist no-bullet">
-           <li>My Work</li>
-           <li>About Me</li>
-           <li>Contact</li>
-        </ul>      
+     <div id="topnav_button" class="container-3d">
+        <div class="icon-flip">
+          <div class="open icon front">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M45 18.7l-29.9 4.6 7.8 7.8 -7.8 1.2 7.8 7.8 -7.8 1.2 18.4 18.5c13.8-1.6 24.7-12.5 26.3-26.3L45 18.7z"/><path fill="#F7FFFF" d="M45 32H15v-4h30V32zM45 37H15v4h30V37zM45 19H15v4h30V19z"/></svg>
+          </div>
+          <div class="close icon back">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M21 42.2L37.7 59C48.1 56.2 56.2 48.1 59 37.8L42.2 21 21 42.2z"/><rect x="15" y="27.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 30 -12.4264)" fill="#FFFFFF" width="30" height="4.5"/><rect x="15" y="27.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -12.4264 30)" fill="#FFFFFF" width="30" height="4.5"/></svg>
+         </div>
+       </div>
+     </div>
+      <nav id="topnav" >
+        <div class="container">
+          <ul class="navlist no-bullet">
+             <li class="nav_item"><a href="#work">My Work</a></li>
+             <li class="nav_item"><a href="#about">About Me</a></li>
+             <li class="nav_item"><a href="#contact">Contact Me</a></li>
+          </ul>      
+        </div>      
       </nav>
       <section id="splash" class="cover">
-        <header class="row logo">
-          <hgroup class="small-12 large-4 centered columns text-center">
+        <header class="row">
+          <hgroup class="small-12 large-4 centered columns text-center logo">
             <h1>Jake Lawrence</h1>
             <h2 class="subheader"><small>Freelance Digital Designer</small></h2>
           </hgroup>
@@ -39,28 +48,49 @@
           </header>
         </div>
         <ul id="workgallery" class="row clearfix">
-          <li class="item small-12 large-4 text-center left no-bullet"><a href="">
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span class="view icon has-tip" data-tooltip aria-haspopup="true" title="See More">
-                <svg></svg></span>
-            </a></li>
-          <li class="item small-12 large-4 text-center left no-bullet"><a href="">
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span class="view icon has-tip" data-tooltip aria-haspopup="true" title="See More">
-                <svg></svg></span>
-            </a></li>
-          <li class="item small-12 large-4 text-center left no-bullet"><a href="">
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span class="view icon has-tip" data-tooltip aria-haspopup="true" title="See More">
-                <svg></svg></span>
-            </a></li>
+          <li class="item small-12 large-4 medium-4 text-center left no-bullet">
+            <a href="">
+              <div class="container">
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="view icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M59.2 36.7L46.5 24c-8.1-7.3-19.4-7.7-26-2.1 -6.6 5.6-5.8 15-5.7 16l21.4 21.4C47.6 56.9 56.6 48.1 59.2 36.7z"/><path fill="#FFFFFF" d="M30.1 17.8c-9-0.1-17.2 4.9-21.2 13 3.6 8.3 11.9 13.7 21 13.8 9 0 17.3-5.3 21-13.5C46.9 23.1 38.9 17.9 30.1 17.8zM29.9 41.5c-5.8 0-10.5-4.7-10.5-10.5s4.7-10.5 10.5-10.5 10.5 4.7 10.5 10.5S35.7 41.5 29.9 41.5zM36.2 31.1c0 3.5-2.8 6.3-6.3 6.3s-6.3-2.8-6.3-6.3 2.8-6.3 6.3-6.3S36.2 27.6 36.2 31.1z"/></svg>
+                  <span class="tip">See More</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="item small-12 large-4 medium-4 text-center left no-bullet">
+            <a href="">
+              <div class="container">
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="view icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M59.2 36.7L46.5 24c-8.1-7.3-19.4-7.7-26-2.1 -6.6 5.6-5.8 15-5.7 16l21.4 21.4C47.6 56.9 56.6 48.1 59.2 36.7z"/><path fill="#FFFFFF" d="M30.1 17.8c-9-0.1-17.2 4.9-21.2 13 3.6 8.3 11.9 13.7 21 13.8 9 0 17.3-5.3 21-13.5C46.9 23.1 38.9 17.9 30.1 17.8zM29.9 41.5c-5.8 0-10.5-4.7-10.5-10.5s4.7-10.5 10.5-10.5 10.5 4.7 10.5 10.5S35.7 41.5 29.9 41.5zM36.2 31.1c0 3.5-2.8 6.3-6.3 6.3s-6.3-2.8-6.3-6.3 2.8-6.3 6.3-6.3S36.2 27.6 36.2 31.1z"/></svg>
+                  <span class="tip">See More</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="item small-12 large-4 medium-4 text-center left no-bullet">
+            <a href="">
+              <div class="container">
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="view icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M59.2 36.7L46.5 24c-8.1-7.3-19.4-7.7-26-2.1 -6.6 5.6-5.8 15-5.7 16l21.4 21.4C47.6 56.9 56.6 48.1 59.2 36.7z"/><path fill="#FFFFFF" d="M30.1 17.8c-9-0.1-17.2 4.9-21.2 13 3.6 8.3 11.9 13.7 21 13.8 9 0 17.3-5.3 21-13.5C46.9 23.1 38.9 17.9 30.1 17.8zM29.9 41.5c-5.8 0-10.5-4.7-10.5-10.5s4.7-10.5 10.5-10.5 10.5 4.7 10.5 10.5S35.7 41.5 29.9 41.5zM36.2 31.1c0 3.5-2.8 6.3-6.3 6.3s-6.3-2.8-6.3-6.3 2.8-6.3 6.3-6.3S36.2 27.6 36.2 31.1z"/></svg>
+                  <span class="tip">See More</span>
+                </div>
+              </div>
+            </a>
+          </li>
         </ul>
-        <div class="row text-center"><a href="" class="all_projects icon has-tip" data-tooltip="" aria-haspopup="true" title="More Projects">
-            <svg></svg>
-          </a></div>
+        <div class="all_projects text-center icon">
+          <a href="" class="">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M33.5 59.8c13.7-1.6 24.6-12.5 26.2-26.2L43.1 16.9 33.2 22l-5.1-5.1L16.9 28.1l8.2 8.2 -8.2 6.8L33.5 59.8z"/><path fill="#FFFFFF" d="M28.1 28.1H16.9V16.9h11.2V28.1zM43.1 16.9H31.9v11.2h11.2V16.9zM28.1 31.9H16.9v11.2h11.2V31.9zM43.1 31.9H31.9v11.2h11.2V31.9z"/></svg>
+          </a>
+          <span class="tip">All Projects</span>
+        </div>
       </section>
       <section id="about">
         <div class="row">
@@ -71,11 +101,11 @@
         </div>
         <div class="row clearfix">
           <ul class="skills no-bullet">
-            <li class="item small-4 large-2 large-offset-1 columns text-center">test</li>
-            <li class="item small-4 large-2 columns text-center">test</li>
-            <li class="item small-4 large-2 columns text-center">test</li>
-            <li class="item small-4 large-2 columns text-center">test</li>
-            <li class="item small-4 large-2 columns text-center end">test</li>
+            <li class="item small-4 large-2 large-offset-1 columns text-center"><img src="images/html5.png" alt="Html 5"></li>
+            <li class="item small-4 large-2 columns text-center"><img src="images/css3.png" alt="Css3"></li>
+            <li class="item small-4 large-2 columns text-center"><img src="images/jquery.png"></li>
+            <li class="item small-4 large-2 columns text-center"><img src="images/adobecc.png"></li>
+            <li class="item small-4 large-2 columns text-center end"><img src="images/sass.png" alt="Sass"></li>
           </ul>
         </div>
       </section>
@@ -87,7 +117,7 @@
           </header>
           <form data-abide>
             <div class="row">
-              <div class="small-12 large-4 large-offset-2 columns">
+              <div class="small-12 large-6 medium-6 columns">
                 <div class="small-10 small-offset-1 column">
                   <label>Your Name <small>(required)</small><input type="text" required placeholder="Who are you?"></label><small class="error">Please enter your name</small>
                   <label>Your Email <small>(required)</small><input type="email" placeholder="enter valid email address" required></label><small class="error">Please enter a valid email address</small>
@@ -95,7 +125,7 @@
                   <label>Website <small>(optional)</small><input type="text" placeholder="website"></label>
                 </div>
               </div>
-              <div class="small-12 large-4 columns end">
+              <div class="small-12 large-6 medium-6 columns end">
                 <div class="small-10 small-offset-1 column">
                   <label>Subject <small>(required)</small><input type="text" placeholder="What is your query about?" required></label><small class="error">Please enter a subject</small>
                   <label>Message <small>(required)</small><textarea placeholder="Your message" required></textarea></label><small class="error">Please enter a message</small>
@@ -109,10 +139,17 @@
       <footer>
         <div class="row">
           <div class="columns small-12 large-3 social-links">
-            <ul class="no-bullet block-grid-3 text-center">
-              <li></li>
-              <li></li>
-              <li></li>
+            <ul class="no-bullet text-center">
+              <li class="icon left"><a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M34.9 59.6c10.6-1.7 19.3-9 23.1-18.8L43.1 26 34 27.9 24 17.8l-5.5 3.7L23 26l-4.9 16.8L34.9 59.6z"/><rect x="18.1" y="25" fill="#FFFFFF" width="5.9" height="17.8"/><path fill="#FFFFFF" d="M21.1 22.5L21.1 22.5c-2 0-3.3-1.4-3.3-3.1 0-1.7 1.3-3.1 3.3-3.1 2 0 3.3 1.3 3.3 3.1C24.4 21.2 23.1 22.5 21.1 22.5zM45.4 42.7h-5.9v-9.5c0-2.4-0.9-4-3-4 -1.6 0-2.6 1.1-3 2.2 -0.2 0.4-0.2 0.9-0.2 1.4v9.9h-5.9c0 0 0.1-16.1 0-17.8h5.9v2.5c0.8-1.2 2.2-2.9 5.3-2.9 3.9 0 6.8 2.5 6.8 8V42.7z"/></svg></a>
+                <span class="tip">Linked-In</span> 
+              </li>
+              <li class="icon left"><a href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M59.8 33.3L48.1 21.8l-16.4-1.2-2.9-2.9-11.4 6.2-2.9 14.3 21.3 21.3C48.5 56.9 58.4 46.4 59.8 33.3z"/><path fill="#FFFFFF" d="M29.9 30.1l0-3.3c0-1.6 0.2-2.9 0.5-3.9 0.3-1 0.9-2 1.6-2.8 0.9-1 1.9-1.7 3.2-2.3 1.3-0.6 2.6-0.8 4-0.8 2.5 0 5.2 0.8 6.9 2.5 1.7 1.7 2.5 3.8 2.5 6.3 0 2.4-0.8 4.4-2.3 5.9-1.4 1.4-3.5 2.1-6.3 2.1l-1.4-0.1c0 0 0.3-2.2 0.3-3 0-0.8 0-3.4 0-3.4 1.5 0 2.2-0.6 2.2-1.7 0-1-1-1.7-2.3-1.5-1.1 0-1.7 0.7-1.7 2.1 0 0 0 0.9 0 4.6 0 3.7-1.7 6.7-4 8.9-2.2 2.2-5.2 3.2-8.8 3.2-3.7 0-6.7-1.2-9.2-3.7-2.5-2.5-3.7-5.5-3.7-9.1 0-3.7 1.3-6.7 3.8-9.2 2.5-2.5 5.6-3.7 9.3-3.7 1.5 0 2.8 0.2 4.1 0.6l-2.3 7c-0.6-0.2-1.2-0.3-1.9-0.3-1.6 0-2.9 0.5-3.9 1.6-1 1.1-1.5 2.5-1.5 4.1 0 1.6 0.5 2.9 1.5 4 1 1 2.3 1.6 3.8 1.6 1.5 0 2.9-0.5 3.8-1.4C29.2 33.1 29.8 31.8 29.9 30.1L29.9 30.1z"/></svg></a>
+              <span class="tip">Creative-Pool</span>
+              </li>
+              <li class="icon left"><a href=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M39.7 58.4c9.9-3.4 17.5-11.8 19.7-22.3L37.5 14.2 30 18.8V26h-6.8l0 3.5 3.5 3.6 -0.5 11.8L39.7 58.4z"/><path fill="#FFFFFF" d="M37 29.6h-4.3c0 6.9 0 15.4 0 15.4h-6.4c0 0 0-8.4 0-15.4h-3v-5.4h3v-3.5c0-2.5 1.2-6.4 6.4-6.4l4.7 0v5.3c0 0-2.9 0-3.4 0 -0.6 0-1.4 0.3-1.4 1.5v3.2h4.9L37 29.6z"/></svg></a>
+              <span class="tip">Facebook</span>
+              </li>
             </ul>
           </div>
           <div class="columns small-12 large-6 text-center">

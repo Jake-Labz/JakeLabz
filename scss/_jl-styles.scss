@@ -1,8 +1,94 @@
+.wrapper { overflow-x: hidden; height: 100%; width: 100%; max-width:100%; }
+// Icons
 
-.icon {width: 60px; height: 60px; margin: 20px 0 0 20px; @include transition(all 0.3s ease-in); cursor: pointer;
-	circle, .shaddow { @include transition(all 0.3s ease-in);}
+.cover { width: 100%; height: 100%; background-size: cover;}
+
+.icon { @include transition(all 0.3s ease-in); cursor: pointer; max-width: 120px; position: relative;
+	svg { width: 60px; height: 60px; }
+	circle, .shadow { @include transition(all 0.3s ease-in);}
+	.tip { opacity: 0; @include transition(all 0.3s ease-in); display: block; font-family: $font-family-sans-serif2; visibility: hidden; color: transparent; @include transform(translateY(10px)); position: absolute; width: 100%;}
 }
-.icon:hover {@include transform(scale(1.1));
+.icon:hover {
 	circle { fill:#AF2D48; }
-	.shaddow { fill: #6B0C23;}
+	.shadow { fill: #6B0C23;}
+	.tip { opacity: 1; visibility: visible; color: $primary-color; @include transform(translateY(0px));}
+}
+h1 {line-height: 1em; margin-bottom: 40px;}
+h1::after { width: 200px; height: 5px; background: $secondary-color; display: block; content: "."; color: transparent; margin: 0 auto;}
+p {margin-bottom: 40px;}
+
+section { padding: 40px 0; @include box-sizing(border-box);}
+
+// Top Nav
+
+nav#topnav {
+	position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: $tertiary-color; z-index: 99; text-align: center;opacity: 0.95; display: none;
+	.container { display: table; width: 100%; height: 100%;}
+	.navlist {
+		font-family: $font-family-sans-serif2; font-size: rem-calc(24); display: table-cell; vertical-align: middle;
+		a { color: $ghost; text-transform: uppercase; line-height: rem-calc(48); @include transition(0.3s all ease-in);}
+		a:hover {color: $secondary-color; }
+	}
+}
+nav#topnav.hide { opacity: 0; display: none;} 
+
+.container-3d { 
+	position: fixed; top: 20px; left: 20px; z-index: 100; @include perspective(200); width: 60px; height: 60px;
+	.icon-flip { width: 100%; height: 100%; position: absolute; @include transform-style(preserve-3d); @include transition(all 0.5s ease-in);}
+	.icon { position: absolute; width: 100%; height: 100%; @include backface-visibility(hidden); display: block;}
+	.back { @include transform(rotateY(180deg));}
+	.icon-flip.flipped { @include transform(rotateY(180deg)); }
+}
+
+// Splash
+
+#splash { display: table; background: $tertiary-color; color: $ghost;
+	.row { display: table-cell; vertical-align: middle;}
+	h1 {margin-bottom: 0; line-height: 1.2em; color: $ghost;}
+	h1::after { display: none;}
+	h2.subheader {margin-top: 0; line-height: 1em; color: $ghost;
+		small { color: $ghost;}
+	}
+}
+
+// Work
+
+#workgallery {
+	.item { background: $jet; padding-bottom: 30%; position: relative; min-height: 300px;
+		.container { opacity: 0; @include transform(translateY(40px)); @include transition(all 0.3s ease-in);}
+		h2, a, p { color: $ghost; margin-bottom: 10px; display:block; }
+		a {   top: 0; left: 0; width: 100%; height: 100%; position: absolute; @include flex; justify-content: center; align-items: center;
+		}
+		.icon { border: 0; display: block; margin: 0 auto;}
+		h2 { font-size: rem-calc(30);}
+		img { opacity: 0.9; @include transition(0.3s all ease-in); position: absolute; top: 0; left: 0;}
+		a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0;}
+		a:hover icon { 
+			circle { fill:#AF2D48; }
+			.shadow { fill: #6B0C23;}
+		}
+	}
+	.item:hover {
+		img { opacity: 0.8;}
+		.container { opacity: 1; @include transform(translateY(0px));}
+	}
+	li:nth-child(even) { background: $black;}
+}
+
+.all_projects { margin: 20px auto;}
+
+// Contact 
+
+#contact {background: $secondary-color; color: $ghost;
+	h1 { color: $ghost;}
+	h1::after { background-color: $tertiary-color;}
+	label, small { color: $ghost; font-family: $font-family-sans-serif2; font-size: rem-calc(18);}
+	input { border: none; box-shadow: none;}
+}
+
+// Footer
+
+footer { padding: 20px; background: $tertiary-color; color: $ghost;
+	.icon { margin-right: 20px;}
+
 }

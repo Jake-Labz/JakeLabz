@@ -14,8 +14,30 @@
 
 @mixin transition($anim) {
 	-webkit-transition: $anim;
-	-moz-transition: ($anim);
-	-ms-transition: ($anim);
-	transition: ($anim);
+	-moz-transition: $anim;
+	-ms-transition: $anim;
+	transition: $anim;
 }
 
+@mixin perspective($persp) {
+	-webkit-perspective: $persp;
+	perspective: $persp;
+}
+
+@mixin transform-style ($style) {
+	-webkit-transform-style: $style;
+	transform-style: $style;
+}
+
+@mixin backface-visibility($vis) {
+	-webkit-backface-visibility: $vis;
+	backface-visibility: $vis;
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
