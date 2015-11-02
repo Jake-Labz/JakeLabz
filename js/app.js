@@ -4,10 +4,58 @@ $(document).foundation();
 
 // icon flipping
 $(document).ready(function(){
-	$('.icon-flip').click(function(){
-		$(this).toggleClass('flipped')
-	})
-	$('#topnav_button, #topnav .nav_item').click(function(){
-		$('#topnav').fadeToggle(400)
-	})
-})
+
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+	$('.icon-flip, .nav_item a').click(function(){
+		$('.overlay').fadeToggle(400);
+		$('.icon-flip').toggleClass('flipped');
+	});
+
+
+	var scrollout = $('.scrollOut')
+	
+	var h1 = $('h1.standard')
+
+
+	$(window).scroll(function(){
+
+		var wheight = $(window).height()
+		var winpos = $(window).scrollTop();
+		var offset = (winpos) / 2.2 + ('px');
+		var frac = (winpos) / (wheight);
+		var op = 1 - (frac);
+		var screenpos = winpos + wheight
+
+		scrollout.css({'transform':'translateY(' +  offset + ')',
+						'-webkit-transform':'translateY(' + offset + ')',
+						'-moz-transform':'translateY(' + offset + ')',
+						'-ms-transform':'translateY(' + offset + ')',
+						'opacity':(op)
+					});
+
+		h1.each(function(){
+			var pos = $(this).offset()
+			var vpos = pos.top
+
+			if (screenpos > vpos) {
+				$(this).addClass('view');
+			};
+	});
+
+	});
+});

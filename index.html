@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <!-- if you remove this meta tag, the NSA will spy on you through your Xbox Kinect camera -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
+    <title>JakeLabz - Feelance Digital Design</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -23,7 +23,7 @@
          </div>
        </div>
      </div>
-      <nav id="topnav" >
+      <nav id="topnav" class="overlay">
         <div class="container">
           <ul class="navlist no-bullet">
              <li class="nav_item"><a href="#work">My Work</a></li>
@@ -32,14 +32,15 @@
           </ul>      
         </div>      
       </nav>
-      <section id="splash" class="cover">
-        <header class="row">
-          <hgroup class="small-12 large-4 centered columns text-center logo">
+      <header id="splash" class="cover img_overlay">
+          <hgroup class="small-12 large-4 centered columns text-center logo scrollOut">
             <h1>Jake Lawrence</h1>
             <h2 class="subheader"><small>Freelance Digital Designer</small></h2>
           </hgroup>
-        </header>
-      </section>
+          <a href="#work" class="next-scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 38.9 23.1" enable-background="new 0 0 38.9 23.1" xml:space="preserve"><polygon fill="#FFFFFF" points="19.5 22.9 0 3.5 3.5 0 19.9 16.4 35.8 0.4 38.9 3.5 "/></svg>
+          </a>
+      </header>
       <section id="work">
         <div class="row">
           <header class="small-12 column large-6 centered text-center">
@@ -89,7 +90,7 @@
           <a href="" class="">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><circle fill="#FF6479" cx="30" cy="30" r="30"/><path class="shadow" fill="#AF2D48" d="M33.5 59.8c13.7-1.6 24.6-12.5 26.2-26.2L43.1 16.9 33.2 22l-5.1-5.1L16.9 28.1l8.2 8.2 -8.2 6.8L33.5 59.8z"/><path fill="#FFFFFF" d="M28.1 28.1H16.9V16.9h11.2V28.1zM43.1 16.9H31.9v11.2h11.2V16.9zM28.1 31.9H16.9v11.2h11.2V31.9zM43.1 31.9H31.9v11.2h11.2V31.9z"/></svg>
           </a>
-          <span class="tip">All Projects</span>
+          <span class="tip">Load More Projects</span>
         </div>
       </section>
       <section id="about">
@@ -112,7 +113,7 @@
       <section id="contact">
         <div class="row">
           <header class="column small-10 large-6 centered text-center">
-            <h1 class="light">Contact Me</h1>
+            <h1 class="light standard">Contact Me</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat eum, voluptatibus obcaecati, quos magni incidunt.</p>
           </header>
           <form data-abide>
@@ -161,6 +162,7 @@
         </div>
       </footer>
     </div>
+     
 
     <!-- body content here -->
 

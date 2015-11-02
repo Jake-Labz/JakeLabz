@@ -1,4 +1,4 @@
-.wrapper { overflow-x: hidden; height: 100%; width: 100%; max-width:100%; }
+.wrapper { height: 100%; width: 100%; max-width:100%; }
 // Icons
 
 .cover { width: 100%; height: 100%; background-size: cover;}
@@ -6,15 +6,19 @@
 .icon { @include transition(all 0.3s ease-in); cursor: pointer; max-width: 120px; position: relative;
 	svg { width: 60px; height: 60px; }
 	circle, .shadow { @include transition(all 0.3s ease-in);}
-	.tip { opacity: 0; @include transition(all 0.3s ease-in); display: block; font-family: $font-family-sans-serif2; visibility: hidden; color: transparent; @include transform(translateY(10px)); position: absolute; width: 100%;}
+	.tip { opacity: 0; @include transition(all 0.3s ease-in); display: block; font-family: $font-family-sans-serif2; visibility: hidden; color: transparent; @include transform(translateY(10px));}
 }
 .icon:hover {
 	circle { fill:#AF2D48; }
 	.shadow { fill: #6B0C23;}
 	.tip { opacity: 1; visibility: visible; color: $primary-color; @include transform(translateY(0px));}
 }
-h1 {line-height: 1em; margin-bottom: 40px;}
-h1::after { width: 200px; height: 5px; background: $secondary-color; display: block; content: "."; color: transparent; margin: 0 auto;}
+h1.standard {line-height: 1em; margin-bottom: 40px; opacity: 0.4; @include transition(all 0.8s ease-in);}
+h1.standard.view { opacity: 1;}
+h1.standard::after { width: 20px; height: 5px; background: $secondary-color; display: block; content: "."; color: transparent; margin: 0 auto; @include transition(all 1s ease-in);}
+h1.standard.view::after { width: 200px;}
+h1.light { color: $ghost;}
+h1.light.standard::after { background-color: $tertiary-color;}
 p {margin-bottom: 40px;}
 
 section { padding: 40px 0; @include box-sizing(border-box);}
@@ -23,9 +27,9 @@ section { padding: 40px 0; @include box-sizing(border-box);}
 
 nav#topnav {
 	position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: $tertiary-color; z-index: 99; text-align: center;opacity: 0.95; display: none;
-	.container { display: table; width: 100%; height: 100%;}
+	.container { width: 100%; height: 100%; @include flex; justify-content: center; align-items: center;}
 	.navlist {
-		font-family: $font-family-sans-serif2; font-size: rem-calc(24); display: table-cell; vertical-align: middle;
+		font-family: $font-family-sans-serif2; font-size: rem-calc(24);
 		a { color: $ghost; text-transform: uppercase; line-height: rem-calc(48); @include transition(0.3s all ease-in);}
 		a:hover {color: $secondary-color; }
 	}
@@ -39,17 +43,21 @@ nav#topnav.hide { opacity: 0; display: none;}
 	.back { @include transform(rotateY(180deg));}
 	.icon-flip.flipped { @include transform(rotateY(180deg)); }
 }
-
 // Splash
 
-#splash { display: table; background: $tertiary-color; color: $ghost;
-	.row { display: table-cell; vertical-align: middle;}
+#splash { @include flex; justify-content: center; align-items: center; background: $black url(../images/splashback.jpg) fixed; color: $ghost; position: relative; background-size: cover;
 	h1 {margin-bottom: 0; line-height: 1.2em; color: $ghost;}
-	h1::after { display: none;}
 	h2.subheader {margin-top: 0; line-height: 1em; color: $ghost;
 		small { color: $ghost;}
 	}
+	.next-scroll { position: absolute; bottom: 40px; left: 50%; @include transform(translateX(-50%)); @include transition(all 0.2s ease-in); opacity: 0.4;
+		svg { width: 40px;}
+	}
+	.next-scroll:hover { @include transform(translateY(25%) translateX(-50%)); opacity: 0.95;}
 }
+.img_overlay { position: relative;}
+.img_overlay::before { background: $black; opacity: 0.4; content: '.'; color: transparent; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
 
 // Work
 
@@ -77,11 +85,11 @@ nav#topnav.hide { opacity: 0; display: none;}
 
 .all_projects { margin: 20px auto;}
 
+#work { padding-bottom: 0;}
+
 // Contact 
 
 #contact {background: $secondary-color; color: $ghost;
-	h1 { color: $ghost;}
-	h1::after { background-color: $tertiary-color;}
 	label, small { color: $ghost; font-family: $font-family-sans-serif2; font-size: rem-calc(18);}
 	input { border: none; box-shadow: none;}
 }
