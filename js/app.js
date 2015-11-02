@@ -5,7 +5,7 @@ $(document).foundation();
 // icon flipping
 $(document).ready(function(){
 
-	$(function() {
+$(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -20,6 +20,33 @@ $(document).ready(function(){
   });
 });
 
+	(function($){
+	    $.fn.parallax = function(options){
+	        var $$ = $(this);
+	        offset = $$.position();
+	        var defaults = {
+	            start: offset.top,
+	            stop: offset.top + $$.height(),
+	            coeff: 0.95
+	        };
+	        var opts = $.extend(defaults, options);
+	        return this.each(function(){
+	            $(window).bind('scroll', function() {
+	                windowTop = $(window).scrollTop();
+	                if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
+	                    newCoord = windowTop * opts.coeff;
+	                    $$.css({
+	                        "background-position-y":  newCoord + "px"
+	                    });
+	                }
+	            });
+	        });
+	    };
+	})(jQuery);
+
+	$('#splash').parallax({
+		coeff: -0.5
+	});
 
 	$('.icon-flip, .nav_item a').click(function(){
 		$('.overlay').fadeToggle(400);
@@ -49,10 +76,10 @@ $(document).ready(function(){
 					});
 
 		h1.each(function(){
-			var pos = $(this).offset()
-			var vpos = pos.top
+			var offset = $(this).offset()
+			var start = offset.top
 
-			if (screenpos > vpos) {
+			if (screenpos > start) {
 				$(this).addClass('view');
 			};
 	});
